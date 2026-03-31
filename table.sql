@@ -1,22 +1,22 @@
 CREATE DATABASE IF NOT EXISTS gestion_supermarche;
 USE gestion_supermarche;
 
-
-CREATE TABLE produit (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    designation VARCHAR(100),
-    prix INT,
-    quantite_en_stock INT
+CREATE TABLE produits (
+    id_produit INT AUTO_INCREMENT PRIMARY KEY,
+    designation VARCHAR(100) NOT NULL,
+    prix_unitaire INT NOT NULL,
+    stock_actuel INT DEFAULT 0
 );
 
-CREATE TABLE caisse (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_caisse VARCHAR(50)
+CREATE TABLE caisses (
+    id_caisse INT AUTO_INCREMENT PRIMARY KEY,
+    nom_caisse VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE achat (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE achats (
+    id_achat INT AUTO_INCREMENT PRIMARY KEY,
     id_produit INT,
     id_caisse INT,
-    quantite INT
+    quantite INT NOT NULL,
+    date_achat DATETIME DEFAULT CURRENT_TIMESTAMP
 );
