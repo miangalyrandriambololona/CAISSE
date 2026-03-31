@@ -1,5 +1,8 @@
 Travaux à faire:
     - Création base:
-        - Table:
-            - 
+        - Table et données:
+            - Produit
+            - Caisse
+            - Achat
+            
     - initialisation php flight
