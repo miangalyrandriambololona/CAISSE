@@ -4,5 +4,14 @@ Travaux à faire:
             - Produit
             - Caisse
             - Achat
-            
+
     - initialisation php flight
+    - Création template:
+        - html:
+            - body : 3 lignes 
+            - container: 2 colonnes
+        - css:
+            - display: grid
+            - grid-template-rows 1 2 3;
+
+            - grid-template-columns: 1 2;
